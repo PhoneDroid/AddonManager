@@ -1,27 +1,104 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<!-- NOTE: The Addon Manager still uses the original xmlns entry so that older versions of FreeCAD can upgrade
- to the newest Addon Manager. This can be changed when FreeCAD v1.0 is no longer supported. -->
-<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
-    <name>Addon Manager</name>
-    <description>Development branch of a tool to install workbenches, macros, themes, etc.</description>
-    <icon>Resources/icons/addon_manager.svg</icon>
+<?xml
+    version = '1.0'
+    encoding = 'UTF-8'
+    standalone = 'no'
+?>
+<!-- 
+    NOTE: 
+    The Addon Manager still uses the original xmlns entry so that 
+    older versions of FreeCAD can upgrade to the newest Addon Manager. 
+    
+    This can be changed when FreeCAD v1.0 is no longer supported. 
+-->
+<package
+    format = '1'
+    xmlns = 'https://wiki.freecad.org/Package_Metadata'
+>
+
+    <!--[ Versions ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
     <version>2026.1.19dev</version>
     <date>2026-1-19</date>
-    <maintainer email='chennes@freecad.org'>Chris Hennes</maintainer>
-    <author email = 'yorik@uncreated.net'>Yorik van Havre</author>
+
+    <!--[ Info ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <description>Browser, installer and manager for addons.</description>
+    <name>Addon Manager</name>
+
+    <!--[ Tags ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <tag>Installer</tag>
+    <tag>Manager</tag>
+    <tag>Browser</tag>
+    <tag>Addons</tag>
+
+    <!--[ Maintainers ]――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <maintainer
+        email = 'chennes@freecad.org'
+    >Chris Hennes</maintainer>
+
+    <!--[ Authors ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <author
+        email = 'yorik@uncreated.net'
+    >Yorik van Havre</author>
+
     <author>Jonathan Wiedemann</author>
     <author>Kurt Kremitzki</author>
-    <license file="LICENSE">LGPL-2.1-or-later</license>
-    <url type='repository' branch='dev'>https://github.com/FreeCAD/AddonManager</url>
-    <url type='bugtracker'>https://github.com/FreeCAD/AddonManager/issues</url>
-    <url type='readme'>https://github.com/FreeCAD/AddonManager/blob/dev/README.md</url>
+    <author>Chris Hennes</author>
+
+    <!--[ Licenses ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <license
+        file = 'LICENSE'
+    >LGPL-2.1-or-later</license>
+
+    <!--[ Icon ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <icon>Resources/icons/addon_manager.svg</icon>
+
+    <!--[ Urls ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
+
+    <url
+        type = 'documentation'
+    >https://wiki.freecad.org/Std_AddonMgr</url>
+
+    <url
+        branch = 'dev'
+        type = 'repository'
+    >https://github.com/FreeCAD/AddonManager</url>
+
+    <url
+        type = 'bugtracker'
+    >https://github.com/FreeCAD/AddonManager/issues</url>
+    
+    <url
+        type = 'discussion'
+    >https://github.com/FreeCAD/AddonManager/issues</url>
+
+    <url
+        type = 'website'
+    >https://github.com/MortenVajhoj/StandardBeams</url>
+
+    <url
+        type = 'readme'
+    >https://github.com/FreeCAD/AddonManager/blob/dev/README.md</url>
+
+    <!--[ Content ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <content>
         <workbench>
-            <!-- Even though the Addon Manager is not a workbench, it declares itself as one so that versions of
-            FreeCAD prior to 1.1 can see the InitGui.py file and run it. -->
-            <name>AddonManager</name>
-            <subdirectory>./</subdirectory>
+
+            <!-- 
+                Even though the Addon Manager is not a workbench, it 
+                declares itself as one so that versions of FreeCAD 
+                prior to 1.1 can see the InitGui.py file and run it. 
+            -->
+
+            <subdirectory>.</subdirectory>
+
         </workbench>
     </content>
+
 </package>
